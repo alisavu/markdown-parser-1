@@ -21,6 +21,14 @@ public class MarkdownParseTest {
         assertEquals(MarkdownParse.getLinks(fileName), stringList);
 
     }
+
+    @Test 
+    public void getLinksFile2() throws IOException {
+        List<String> stringList = List.of("https://google.com", "some-thing.html");
+        String fileName = Files.readString(Path.of("/Users/alisavu/Documents/GitHub/markdown-parser-1/test-file2.md"));
+        assertEquals(MarkdownParse.getLinks(fileName), stringList);
+
+    }
     
 
 }
