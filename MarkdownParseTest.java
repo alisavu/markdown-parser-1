@@ -19,11 +19,11 @@ public class MarkdownParseTest {
         Path filePath = Path.of("test-file.md");
         String content = Files.readString(filePath);
 
-        ArrayList<String> list = new ArrayList<>();
-        list.add("https://something.com");
-        list.add("some-thing.html");
+        ArrayList<String> links = new ArrayList<>();
+        links.add("https://something.com");
+        links.add("some-thing.html");
 
-        assertEquals(list, MarkdownParse.getLinks(content));
+        assertEquals(links, MarkdownParse.getLinks(content));
     }
 
     @Test
@@ -31,11 +31,11 @@ public class MarkdownParseTest {
         Path filePath = Path.of("test-file2.md");
         String content = Files.readString(filePath);
 
-        ArrayList<String> list = new ArrayList<>();
-        list.add("https://google.com");
-        list.add("some-thing.html");
+        ArrayList<String> links = new ArrayList<>();
+        links.add("https://google.com");
+        links.add("some-thing.html");
 
-        assertEquals(list, MarkdownParse.getLinks(content));
+        assertEquals(links, MarkdownParse.getLinks(content));
     }
     
     @Test
@@ -43,9 +43,9 @@ public class MarkdownParseTest {
         Path filePath = Path.of("test-file3.md");
         String content = Files.readString(filePath);
 
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> links = new ArrayList<>();
 
-        assertEquals(list, MarkdownParse.getLinks(content));
+        assertEquals(links, MarkdownParse.getLinks(content));
     }
 
     @Test
@@ -53,9 +53,9 @@ public class MarkdownParseTest {
         Path filePath = Path.of("test-file4.md");
         String content = Files.readString(filePath);
 
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> links = new ArrayList<>();
 
-        assertEquals(list, MarkdownParse.getLinks(content));
+        assertEquals(links, MarkdownParse.getLinks(content));
     }
 
     @Test
@@ -63,9 +63,9 @@ public class MarkdownParseTest {
         Path filePath = Path.of("test-file5.md");
         String content = Files.readString(filePath);
 
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> links = new ArrayList<>();
 
-        assertEquals(list, MarkdownParse.getLinks(content));
+        assertEquals(links, MarkdownParse.getLinks(content));
     }
 
     @Test
@@ -73,9 +73,9 @@ public class MarkdownParseTest {
         Path filePath = Path.of("test-file6.md");
         String content = Files.readString(filePath);
 
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> links = new ArrayList<>();
 
-        assertEquals(list, MarkdownParse.getLinks(content));
+        assertEquals(links, MarkdownParse.getLinks(content));
     }
 
     @Test
@@ -83,9 +83,9 @@ public class MarkdownParseTest {
         Path filePath = Path.of("test-file7.md");
         String content = Files.readString(filePath);
 
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> links = new ArrayList<>();
 
-        assertEquals(list, MarkdownParse.getLinks(content));
+        assertEquals(links, MarkdownParse.getLinks(content));
     }
 
     @Test
@@ -93,9 +93,9 @@ public class MarkdownParseTest {
         Path filePath = Path.of("test-file8.md");
         String content = Files.readString(filePath);
 
-        ArrayList<String> list = new ArrayList<>();
-        list.add("a link on the first line");
+        ArrayList<String> links = new ArrayList<>();
+        links.add("a link on the first line");
 
-        assertEquals(list, MarkdownParse.getLinks(content));
+        assertEquals(links, MarkdownParse.getLinks(content));
     }
 }
